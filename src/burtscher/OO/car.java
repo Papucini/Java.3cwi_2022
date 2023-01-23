@@ -1,46 +1,134 @@
 package burtscher.OO;
 
 import java.util.Scanner;
+import burtscher.OO.Engine;
+import burtscher.OO.Tire;
+import burtscher.OO.RearMirror;
 
-public class car {
-    public int fuelconsumtion;
-    public String brand;
-    public String serialnumber;
-    public String color;
-    public int getFuelAmount;
-    public int fuelAmount;
-    private double fuelVolume;
+public class Car {
+    private Tire tires;
+    private Engine engine;
+    private RearMirror mirror;
+    private int fuelConsumption;
+    private int fuelAmount;
+    private int fuelVolume;
+    private String brand;
+    private String model;
+    private String serialNumber;
+    private String color; 
 
 
-    public void brake() {
+
+    public Car(int fuelConsumption, int fuelAmount, int fuelVolume, String brand, String model, String serialNumber, String color){
+        this.engine = engine;
+        this.fuelConsumption = fuelConsumption;
+        this.fuelAmount = fuelAmount;
+        this.fuelVolume = fuelVolume;
+        this.brand = brand;
+        this.model = model;
+        this.serialNumber = serialNumber;
+        this.color = color;
+    }
+
+
+
+    public void drive(){
+        this.fuelAmount = this.fuelAmount - this.fuelConsumption;
+        System.out.println(this.serialNumber + " Is currently diving");
+    }
+    public void brake(){
         String brake;
         brake = "Ich bremse";
         System.out.println(brake);
     }
 
-    public void turboboost() {
-        if (this.fuelVolume * 0.1 < this.fuelAmount) {
+    public void turboBoost(){
+        if(this.fuelVolume*0.1 < this.fuelAmount){
             System.out.println("SuperBoostMode activated");
-        } else {
-            System.out.println("Not enouth fuel to go to SuperBoost");
+        } else{
+            System.out.println("Not enough fuel to go to Superboost.");
         }
-        System.out.println();
     }
 
-    public void honk() {
-        System.out.println("Please enter amount of times you want to honk");
+    public void honk(){
+        System.out.println("Please enter the Amount of times you want to honk");
         Scanner scanner = new Scanner(System.in);
 
         int amount = scanner.nextInt();
 
-        for (int amountOfRepetitions = 0; amountOfRepetitions < amount; amountOfRepetitions++) {
-            System.out.println("TuuuuT");
+        for (int amountOfRepetitions = 0;  amountOfRepetitions < amount; amountOfRepetitions++) {
+            System.out.println("TUUUUUUUUUUUT");
         }
     }
 
-    public void getRemainingRange() {
-        int remainingRange = this.fuelAmount/this.fuelconsumtion;
+    public void getRemainingRange(){
+        int remainingRange = this.fuelAmount/this.fuelConsumption;
         System.out.println("There are about " + remainingRange*100 + "km of Range remaining");
     }
 
+    public int getFuelConsumption() {
+        return fuelConsumption;
+    }
+
+    public int getFuelAmount() {
+        return fuelAmount;
+    }
+
+    public int getFuelVolume() {
+        return fuelVolume;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public String getSerialNumber() {
+        return serialNumber;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+
+    public void setFuelConsumption(int fuelConsumption) {
+        this.fuelConsumption = fuelConsumption;
+    }
+
+    public void setFuelAmount(int fuelAmount) {
+        this.fuelAmount = fuelAmount;
+    }
+
+    public void setFuelVolume(int fuelVolume) {
+        this.fuelVolume = fuelVolume;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
 }
+

@@ -18,7 +18,5 @@ public class mainCar {
         c2.serialnumber = "A1245";
 
 
-
-
     }
 }
