@@ -1,4 +1,4 @@
-package burtscher.OO;
+package burtscher.OO.Car;
 
 public class RearMirror {
     private int size;

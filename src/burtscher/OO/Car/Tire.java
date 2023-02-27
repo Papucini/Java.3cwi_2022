@@ -1,4 +1,4 @@
-package burtscher.OO;
+package burtscher.OO.Car;
 
 public class Tire {
     private enum TYPE {STREET, OFFROAD}

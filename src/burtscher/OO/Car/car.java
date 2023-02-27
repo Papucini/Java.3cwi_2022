@@ -1,9 +1,6 @@
-package burtscher.OO;
+package burtscher.OO.Car;
 
 import java.util.Scanner;
-import burtscher.OO.Engine;
-import burtscher.OO.Tire;
-import burtscher.OO.RearMirror;
 
 public class Car {
     private Tire tires;
